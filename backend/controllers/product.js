@@ -16,7 +16,7 @@ const registerProduct = async (req, res) => {
 
   const result = await productSchema.save();
 
-  if (!result) return res.status(400).send("Failed to register product");
+  if (!result) return res.status(400).send("Failed to register product, retry latter");
 
   return res.status(200).send({ result });
 };
